@@ -3,17 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CG Know-How - Auto Slider</title>
+<title>CG Know-How - Auto Slider with Updated Link</title>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@700;800&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  /* CSS คงเดิมตามดีไซน์พรีเมียม */
   body { margin: 0; padding: 0; font-family: 'Figtree', 'Kanit', sans-serif; background-color: #ffffff; }
   .knowhow-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; display: flex; align-items: center; gap: 60px; box-sizing: border-box; }
   .slider-side { flex: 1; position: relative; max-width: 500px; width: 100%; }
   .slider-wrapper { background: white; padding: 12px; border-radius: 24px; box-shadow: 0 25px 50px rgba(0,0,0,0.1); position: relative; overflow: hidden; min-height: 450px; display: flex; align-items: center; justify-content: center; }
   #slides-container { width: 100%; height: 100%; }
-  .slides { display: none; width: 100%; animation: fade 1.2s ease; } /* ปรับความนุ่มนวลตอนเปลี่ยนภาพ */
+  .slides { display: none; width: 100%; animation: fade 1.2s ease; }
   .slides img { width: 100%; height: auto; border-radius: 16px; display: block; }
   @keyframes fade { from { opacity: 0.4; } to { opacity: 1; } }
   .slider-controls { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 25px; }
@@ -50,7 +49,7 @@
         <h1 class="main-title">CG Know-How</h1>
         <p class="sub-title">รอบรู้เรื่อง CG ปฏิบัติงานอย่างโปร่งใส</p>
       </div>
-      <a href="https://haadthipo365.sharepoint.com/sites/RMCGConnect/SitePages/CG-Know-How.aspx" target="_blank" class="btn-more">
+      <a href="https://haadthipo365.sharepoint.com/:f:/s/CG/IgBjMH2mdcBBSb0NsgN1OEfpAeaCTHvDtQhKddh6z17sAoI?e=O3MtOI" target="_blank" rel="noopener noreferrer" class="btn-more">
         คลิกเพื่อดูเนื้อหาเพิ่มเติม
       </a>
     </div>
@@ -83,7 +82,7 @@
         const slides = document.getElementsByClassName("slides");
         if (slides.length > 0) {
           showSlides(slideIndex);
-          resetAutoSlide(); // เริ่มการเลื่อนอัตโนมัติหลังจากโหลดข้อมูลเสร็จ
+          resetAutoSlide();
         } else {
           document.getElementById('loading-text').innerText = 'ยังไม่มีรูปภาพในระบบ';
         }
@@ -92,17 +91,16 @@
       }
     }
 
-    // ฟังก์ชันจัดการการเลื่อนอัตโนมัติ
     function resetAutoSlide() {
       clearInterval(autoSlideTimer);
       autoSlideTimer = setInterval(() => {
         plusSlides(1);
-      }, 5000); // ตั้งเวลาเลื่อนทุกๆ 5 วินาที
+      }, 5000);
     }
 
     function plusSlides(n) {
       showSlides(slideIndex += n);
-      resetAutoSlide(); // รีเซ็ตเวลาใหม่เมื่อมีการกดปุ่มด้วยตัวเอง
+      resetAutoSlide();
     }
 
     function showSlides(n) {
